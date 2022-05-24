@@ -1,0 +1,201 @@
+body{
+    background-color: whitesmoke;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* left: -50px; */
+    width: 50px;
+    height: 1000px;
+    padding: 10px;
+    background:#d4af37 ;
+    color: black;
+    transition: 0.5s;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 50px;
+    margin: 0 0 50px 0;
+    position: relative;
+}
+.menu-icon{
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 5px;
+    background: #d4af37;
+    text-align: center;
+    cursor: pointer;
+}
+span .bx-x{
+    display: none;
+}
+.logo a{
+    height: 100%;
+}
+.logo a img{
+    width: 40px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.aside-menu li{
+    list-style: none;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px auto;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+li a{
+    position: relative;
+    height: 30px;
+}
+li a:hover{
+    background-color: wheat;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+li a i{
+    margin-right: 20px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+}
+li a i span{
+    width: 0;
+    overflow: hidden;
+    height: 25px;
+    transition: 0.5s;
+}
+.bxs-chevron-right{
+    position: absolute;
+    right: 0;
+    width: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sub-dash{
+    width: 80%;
+    margin: 0 0 0 25px;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+}
+.sub-dash li{
+    height: 25px;
+    padding: 5px 10px;
+    margin: 4px auto;
+    font-size: 15px;
+    font-weight: 200;
+}
+.sub-dash li a{
+    position: initial;
+    height: 100%;
+    display: initial;
+}
+ul.log{
+    margin: 80px 0 0 0;
+    overflow: hidden;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+.big-ul{
+    display: flex;
+}
+.big-ul>li{
+    list-style-type: none;  
+    align-items: flex-end;
+}
+section{
+    width: calc(100% - 400px);
+    margin: 50px 70px;
+    width: 100%;
+    padding: 10px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.5s;
+}
+.titre{
+    color: #d4af37;
+    text-align: center;
+    font-size: 150px;
+}
+
+.main {
+    text-align: center;
+    margin: 45px;
+    color: royalblue;
+    width: 30%;
+    height: 250px;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 20px;
+}
+.main h2{
+    font-family: paytone one;
+}
+
+.main p{
+    padding: 15px;
+    color: black;
+    font-size: medium;
+    text-align: start;
+    font-weight: 200;     
+}
+/* aside */
+aside.expand{
+    width: 250px;
+    left: 0;
+}
+aside.expand ~ section{
+    margin: 50px 300px;
+}
+aside.expand .menu-icon>.bx-x{
+    display: initial;
+}
+aside.expand .menu-icon>.bx-menu{
+    display: none;
+}
+aside.expand .logo a span{
+    width: 150px;
+}
+aside.expand li a span{
+    width: 105px;
+}
+aside.expand .bxs-chevron-right{
+width: 25px;
+}
+
+li.nav-item{
+    background: whitesmoke;
+} 
+li.nav-item .sub-dash{
+    max-height: 300px;
+}
+li.nav-item a> .bxs-chevron-right{
+    transform: rotate(90deg);
+}
+
+
+
+
+

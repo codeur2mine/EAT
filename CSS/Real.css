@@ -1,0 +1,419 @@
+*{
+    padding: 0;
+    margin: 0 0 3px;  
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav{
+    width: 80%;
+    height: 80px;
+    background: white;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    
+}
+.logo{
+    width: 50%;
+}
+.logo img{
+    width: 40%;
+    float: left;
+    transition: transform .30s;
+}
+.logo img:hover{
+    transform: scale(1.5); 
+}
+
+
+.nav-menu{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-menu li{
+list-style: none;
+padding: 10px 15px;
+font-size: 20px;
+color: #666;
+}
+.nav-menu>li>a:hover{
+    color: #7B3F00;
+}
+.search-box{
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    height: 40px;
+    border-radius: 40px;
+    padding: 2px;
+}
+.search-box:hover >.search-txt{
+    width: 240px;
+    padding: 0 6px;
+
+}
+.search-box:hover >.search-btn{
+    background: black;
+    
+}
+.search-btn{
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #7B3F00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #7B3F00;
+    font-weight:500;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.big-nav{
+    width: 60%;
+    float:left
+}
+.big-nav ul li>ul{
+    width: 150px;
+    height: 0px;
+    background: #7B3F00;
+    position: absolute;
+    left: 500px;
+    top: 120px;
+    transition:0.5s;
+    overflow: hidden;
+}
+.big-nav ul li>ul li{
+    width: 150px;
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+
+}
+.big-nav ul li>ul li a{
+    font-weight:600;
+    display:inline-block;
+    margin: 5px 0;
+}
+.big-nav ul li:hover ul{
+    height: 300px;
+    top: 55px;
+}
+
+.nav-right{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.nav-right li{
+    list-style: none;
+    margin: 0 15px;
+    color: #555;
+    font-size: 20px;
+    padding: 8px 30px;
+}
+.nav-right li:last-child{
+    border:2px solid;
+    font-size: 18px;
+    border-radius: 20px;
+    border-color: #7B3F00;
+}
+.cart{
+    position: relative;
+    
+}
+.cart:before{
+    position: absolute;
+    content: attr(data-count);
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    border-radius: 15px;
+    top: -20px;
+    text-align: center;
+    background:royalblue ;
+    color: white;
+    cursor: cell;
+    opacity: 0;
+}
+.cart.on:before{
+    opacity: 1;
+}
+main{
+    width: 100%;
+    height: 580px;
+    padding: 10px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+.item{
+    width: 19%;
+    height: 350px;
+    background: whitesmoke;
+    padding: 5px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.item:hover{
+    height: 500px;
+}
+.item:hover .dat{
+    padding: 10px;
+    height: 250px;
+}
+.item:hover img{
+    transform: scale(0.8);
+}
+.item img{
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+    justify-content: center;
+    transition: inherit;
+    transform: scale(1.09);
+}
+.dat{
+    width: 100%;
+    height: 0;
+    background: #7B3F00;
+    padding: 0;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    transition: inherit;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.dat p{
+    margin: 10px auto;
+}
+.dat strong{
+    display: inline-block;
+    width: 100%;
+
+}
+.dat p:first-child strong{
+    width: 80%;
+}
+.price{
+    font-size: 17px;
+    font-weight: bold;
+}
+.in span{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    background: white;
+    display: inline-block;
+    text-align: center;
+    margin: 0 6px;
+}
+.in span.active{
+    background: gray;
+    color: white;
+}
+.in:nth-of-type(2n) span{
+    background: #55299D;
+    border: 2px solid #ccc;
+}
+.in:nth-of-type(2n) span:first-child{
+    background: #0097d6;
+
+}
+.in:nth-of-type(2n) span:last-child{
+    background: #7B3F00;
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 8px 20px;
+    background: #000;
+    margin: 5px 30px 0 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+button.add{
+    background: whitesmoke;
+    color: black;
+    font-weight: bolder;
+}
+/* js file css */
+.image-carior{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    width: 100%;
+    height: 300px;
+    border-radius: inherit;
+    display: none;
+}
+.image-carior.active{
+display: block;
+z-index: 5;
+}
+.item:nth-child(1) .image-carior.active{
+animation: first 0.5s ease-in;
+}
+.item:nth-child(2) .image-carior.active{
+    animation: second 0.5s ease-in;
+}
+.item:nth-child(3) .image-carior.active{
+    animation: third 0.5s ease-in;
+}
+.item:nth-child(4) .image-carior.active{
+    animation: four 0.5s ease-in;  
+}
+.item:nth-child(5) .image-carior.active{
+    animation: five 0.5s ease-in;
+}
+.item:nth-child(6) .image-carior.active{
+    animation: six 0.5s ease-in;
+}
+.item:nth-child(7) .image-carior.active{
+    animation: seven 0.5s ease-in;
+}
+@keyframes first{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: 925px;
+    }
+}
+@keyframes second{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: 705px;
+    }
+}
+@keyframes third{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: 387px;
+    }
+}
+@keyframes four{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: 150px;
+    }
+    
+}
+@keyframes five{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: -100px;
+    }
+}
+@keyframes six{
+    to{
+        transform: scale(0.08);
+        top: -600px;
+        left: 925px;
+    }
+}
+@keyframes seven{
+    to{
+        transform: scale(0.08);
+        top: -605px;
+        left: -100px;
+    }
+}
+.cart-field{
+    width: 90%;
+    height: 700px;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    position: absolute;
+    top: -700px;
+    left: 5%;
+    transition: 0.5s;
+}
+.cart-field.display{
+    top: 200px
+}
+.cart-field .item,
+.cart-field .item:hover{
+    width: 96%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px auto;
+
+}
+.cart-field .item img,
+.cart-field .item:hover img{
+    transform: scale(1);
+    width: 25%;
+}
+.cart-field .item .dat{
+    width: 60%;
+    position: relative;
+    height: 100%;
+    padding: 30px;
+    left: auto;
+    background: inherit;   
+}
+.cart-field .dat strong,
+.cart-field .dat .price{
+    font-size: 30px;
+}
+.cart-field .dat strong p:first-child strong{
+    width: 85%;
+}
+.cart-field .dat strong p small{
+    font-size: 20px;
+}
+.cart-field .in span{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+}
+.cart-field .image-carior.active{
+    display: none;
+}
+#mailto a span{
+    color: blue
+
+}
